@@ -44,7 +44,7 @@ function App() {
       {statusMsg && <div className='status'>{statusMsg}</div>}
       {<div className='num-list'>{numbersList.join(", ")}</div>}
       {showWinModal && <WinModal/>}
-      {showResetModal && <ResetModal/>}
+      {(showWinModal || showResetModal ) && <ResetModal setShowResetModal={setShowResetModal} setNumber={setNumber}/>}
     </div>
   )
 }

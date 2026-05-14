@@ -1,9 +1,6 @@
 import {useEffect} from "react";
 
-function WinModal({setStatusMsg}) {
-    useEffect(() => { 
-        setStatusMsg("✅ Correct"); 
-    }, []);
+function WinModal({dispatch}) {
 
     return (
         <div>

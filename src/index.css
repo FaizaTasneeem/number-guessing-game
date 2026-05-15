@@ -8,6 +8,7 @@ body {
     align-items: center;
     overflow-x: hidden;
 }
+
 .container {
     padding: 15px 40px;
     
@@ -24,21 +25,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.backdrop {
-    display: block;
-    position: fixed;       
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9);  
-    transition: opacity 0.3s ease;
-}
-
-.input-container {
-    position: relative;
-    width: 90%;
-    margin: 0%;
-
 }
 
 .header {
@@ -154,7 +140,7 @@ button:hover {
     align-items: center;
     position: absolute;
     /* transform: translate(50%, 50%); */
-    width: 50%;
+    width: 40%;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px); 
@@ -174,7 +160,8 @@ button:hover {
 }
 
 .reset {
+    width: 25%;
     background-color: green;
     border: 3px solid green;
-
+    padding: 18px;
 }

@@ -29,7 +29,7 @@ const reducer = (state, action) => {
         ...state, 
         numberGuessed: action.input,
         numbersList: [...state.numbersList, state.numberGuessed],
-        [action.modalState]: true,
+        ...(action.modalState && { [action.modalState]: true }),
         statusMsg: action.statusMsg,
       }
     case "set_error_msg":

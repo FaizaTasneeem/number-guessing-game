@@ -100,23 +100,23 @@ function App() {
 
   return (
     <div className='container'>
-      <div className='header'>
-        <div className='dice'>🎲 </div>
-        <h1>Guess the Number</h1>
-      </div>
-      <h3>Find the secret number between 1-100</h3>
-      
-      <input type="number" id="number" name="number" value={state.numberGuessed} placeholder="Enter your guess" onChange={(e) => handleInputChange(e)} disabled={state.numbersList.length === 5 || state.showWinModal} />
-      
-      <button onClick={handleNumberSubmit} disabled={state.numbersList.length === 5 || state.showWinModal}>Guess</button>
-      {state.errorMsg !== "" && <div className='error'>{state.errorMsg}</div>}
-      
-      {<h3 className='num-list'>Previous Guesses: {state.numbersList.join(", ")}</h3>}
-      <h4 className={`status ${state.statusMsg ? 'show-div' : ''}`}>{state.statusMsg}</h4>
-      
-      {state.showWinModal && <WinModal />}
-      
-      {(state.showWinModal || state.showResetModal) && <ResetModal dispatch={dispatch}/>}
+        <div className='header'>
+          <div className='dice'>🎲 </div>
+          <h1>Guess the Number</h1>
+        </div>
+        <h3>Find the secret number between 1-100</h3>
+        
+        <input type="number" id="number" name="number" value={state.numberGuessed} placeholder="Enter your guess" onChange={(e) => handleInputChange(e)} disabled={state.numbersList.length === 5 || state.showWinModal} />
+        
+        <button onClick={handleNumberSubmit} disabled={state.numbersList.length === 5 || state.showWinModal}>Guess</button>
+        {state.errorMsg !== "" && <div className='error'>{state.errorMsg}</div>}
+        
+        {<h3 className='num-list'>Previous Guesses: {state.numbersList.join(", ")}</h3>}
+        <h4 className={`status ${state.statusMsg ? 'show-div' : ''}`}>{state.statusMsg}</h4>
+        
+        {state.showWinModal && <WinModal dispatch={dispatch}/>}
+        
+        {(state.showResetModal) && <ResetModal dispatch={dispatch}/>}
     </div>
   )
 }

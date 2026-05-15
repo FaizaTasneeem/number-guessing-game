@@ -1,10 +1,12 @@
-import {useEffect} from "react";
+import { useState, useEffect } from "react";
+import Confetti from "react-confetti";
 
-function WinModal({dispatch}) {
+function WinModal() {
 
     return (
         <div>
-            Win
+            <Confetti width={window.innerWidth} height={window.innerHeight} />
+            {/* Win */}
         </div>
     );
 }

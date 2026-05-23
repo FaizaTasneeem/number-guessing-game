@@ -49,9 +49,9 @@ const reducer = (state, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  useEffect(() => {
-    console.log(state.number);
-  }, [state.number]) 
+  // useEffect(() => {
+  //   console.log(state.number);
+  // }, [state.number]) 
 
   function handleInputChange(e) {
     dispatch({type: "set_input", input: e.target.value});

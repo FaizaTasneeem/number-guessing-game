@@ -98,9 +98,3 @@ npm run lint
 4. You have 5 attempts total.
 5. Restart the game from the modal when you win or lose.
 
-## Future Improvements
-
-- Add stricter input validation for out-of-range values
-- Add difficulty levels (different ranges and attempt limits)
-- Track score and best performance
-- Persist game stats in local storage
